@@ -11,7 +11,6 @@ var changed = require('gulp-changed')
 var imagemin = require('gulp-imagemin')
 var concat = require('gulp-concat')
 var babel = require('gulp-babel')
-var purgecss = require('gulp-purgecss')
 
 var paths = {
   styles: {
@@ -64,8 +63,7 @@ function style () {
     .pipe(postcss([autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }), cssnano()]))
   // Now add/write the sourcemaps
     .pipe(sourcemaps.write())
-    .pipe(concat('main.css'))
-    .pipe(purgecss({ content: ['dist/**/*.html'] }))
+    .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest))
   // Add browsersync stream pipe after compilation
     .pipe(browserSync.stream())
@@ -76,7 +74,7 @@ function js () {
     .src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', paths.js.src])
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
-    .pipe(concat('main.js'))
+    .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream())
 }
@@ -147,7 +145,7 @@ exports.fonts = fonts
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.parallel(style, js, html, images, staticContent, fonts)
+var build = gulp.series(staticContent, fonts, js, images, style, html)
 
 /*
  * You can still use `gulp.task` to expose tasks
