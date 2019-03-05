@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/vascomfnunes/vn-single-page-boilerplate"
   },
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/vascomfnunes/vn-single-page-boilerplate/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/vascomfnunes/vn-single-page-boilerplate",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
