@@ -3,7 +3,7 @@
 ## Directory structure
 
 - **src**: contains all source code (html, scss and js)
-- **static**i: contains all static content (will be copied into the **dist** root directory)
+- **static**: contains all static content (will be copied into the **dist** root directory)
 - **assets**: contains all assets (will be copied into the **dist** root directory)
 - **dist** will contain the compiled version of the project (after gulp build)
 
