@@ -14,7 +14,7 @@ var babel = require('gulp-babel')
 
 var paths = {
   styles: {
-    src: 'src/scss/**/*.scss',
+    src: 'src/scss/main.scss',
     dest: 'dist/css'
   },
   js: {

@@ -2,7 +2,7 @@ html,
 body {
   background-color: $background-color;
   padding: 0;
-  font-family: Raleway, sans-serif;
+  font-family: $font-family-base;
   max-width: 100%;
   overflow-x: hidden;
 }
