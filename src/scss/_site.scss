@@ -3,6 +3,8 @@ body {
   background-color: $background-color;
   padding: 0;
   font-family: Raleway, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1, a {
