@@ -35,5 +35,5 @@ $ gulp watch
 - [Browser-sync](https://www.browsersync.io)
 - [Gulp with scss support, minify (css, html, js and images) and source concatenation](https://www.browsersync.io)
 - [Cookie disclaimer](https://github.com/Wruczek/Bootstrap-Cookie-Alert)
-- [Navmenu smooth scrolling]
-- [Google analytics]
+- Navmenu smooth scrolling
+- Google analytics
